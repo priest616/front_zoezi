@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <title>Update Users</title>
+    <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    
+    <div id="main-wrapper">
+     
+        <div class="header">
+            <nav class="navbar top-navbar navbar-expand-md smallscreenres navbar-light">
+
+            <div class="navbar-header">
+                <i onclick="myFunction()" class=" fa fa-solid fa-bars f-s-20 navbars"></i>
+                </div>
+
+                <div class="titlediv">
+                    <h2>
+                        Nairobi Zoezi Institute
+                    </h2>
+                </div>
+
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                    </ul>
+                    
+                       
+                      
+                      
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
+                            <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                                <ul class="dropdown-user">
+                                    <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+      
+        <div class="left-sidebar smallscreenres" id="nowdrop">
+   
+            <div class="scroll-sidebar">
+       
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-devider"></li>
+                        <li class="nav-label">Home</li>
+                        <li> <a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="nav-label">Log</li>
+                        <li> <a href="all_staff.html">  <span><i class="fa fa-user f-s-20 "></i></span><span>Total population</span></a></li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Admin Functions</span></a>
+                            <ul aria-expanded="false" class="collapse">
+								<li><a href="create_student.html">Create student</a></li>
+								<li><a href="create_teacher.html">Create teacher</a></li>
+                                <li><a href="create_course.html">Create Course</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">course controle</span></a>
+                            <ul aria-expanded="false" class="collapse">
+								<li><a href="course_unit.html">add units to course</a></li>
+								<li><a href="all_units.html">all units</a></li>
+                            </ul>
+                        </li>
+                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">finance controle</span></a>
+                            <ul aria-expanded="false" class="collapse">
+								<li><a href="student_balance.html">students balance</a></li>
+								<li><a href="received_payment.html">recived payment</a></li>
+                            </ul>
+                        </li>
+
+                       <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Activities</span></a>
+                            <ul aria-expanded="false" class="collapse">
+								<li><a href="all_cources.html">All Courses</a></li>
+								<li><a href="add_menu.php">Payrolls</a></li>
+                              
+                                
+                            </ul>
+                        </li>
+						 <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Advanced Controle</span></a></li>
+                         
+                    </ul>
+                </nav>
+            
+            </div>
+           
+        </div>
+   
+        <div class="page-wrapper" style="height:1200px;">
+       
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">Dashboard</h3> </div>
+               
+            </div>
+         
+            <div class="container-fluid">
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>All fields Required!</strong>
+                </div>
+            
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>invalid email!</strong>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Password must be >=6!</strong>
+                </div>
+                
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>invalid phone!</strong>
+                </div>
+                
+                <div class="alert alert-success alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>User Updated!</strong>
+                </div>
+            
+            
+                     <div class="row">
+                   
+                   
+					
+					 <div class="container-fluid">
+              
+					    <div class="col-lg-12">
+                        <div class="card card-outline-primary">
+                            <div class="card-header">
+                                <h4 class="m-b-0 text-white">create teacher</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action='' method='post'  >
+                                    <div class="form-body">
+                                      
+                                        <hr>
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Id Number</label>
+                                                    <input type="text" name="uname" class="form-control" value="" placeholder="username">
+                                                   </div>
+                                            </div>
+                                     
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger">
+                                                    <label class="control-label">First-Name</label>
+                                                    <input type="text" name="fname" class="form-control form-control-danger"  value="" placeholder="jon">
+                                                    </div>
+                                            </div>
+                                      
+                                        </div>
+                                    
+                                        <div class="row p-t-20">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Last-Name </label>
+                                                    <input type="text" name="lname" class="form-control" placeholder="doe"  value="">
+                                                   </div>
+                                            </div>
+                                     
+                                            <div class="col-md-6">
+                                                <div class="form-group has-danger">
+                                                    <label class="control-label">Email</label>
+                                                    <input type="text" name="email" class="form-control form-control-danger"  value="" placeholder="example@gmail.com">
+                                                    </div>
+                                            </div>
+                                        
+                                        </div>
+                                   
+										 <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <input type="text" name="password" class="form-control form-control-danger"   value="" placeholder="password">
+                                                    </div>
+                                                </div>
+                                        
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Phone</label>
+                                                    <input type="text" name="phone" class="form-control form-control-danger"   value="" placeholder="phone">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                 
+                                            
+                                      
+                                        
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row">
+                                       <div class="col-md-6">
+                                           <div class="form-group">
+                                               <label class="control-label">tittle</label>
+                                               <input type="text" name="password" class="form-control form-control-danger"   value="" placeholder="course">
+                                               </div>
+                                           </div>
+                                   
+                                       <div class="col-md-6">
+                                           <div class="form-group">
+                                               <label class="control-label">account</label>
+                                               <input type="text" name="phone" class="form-control form-control-danger"   value="" placeholder="account">
+                                               </div>
+                                           </div>
+                                       </div>
+                            
+                                       
+                                 
+                                   
+                                   </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <input type="submit" name="submit" class="btn btn-primary" value="Save"> 
+                                        <a href="all_staff.html" class="btn btn-inverse">Cancel</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+                </div>
+       
+            </div>
+      
+            <footer class="footer"> Nairobi Zoezi Institute  </footer>
+        
+        </div>
+      
+    </div>
+   
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <script src="js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/sidebarmenu.js"></script>
+    <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
