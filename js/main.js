@@ -5,15 +5,15 @@ function myFunction() {
   }
   
   // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.navbars')) {
-      var dropdowns = document.getElementsByClassName("smallscreenres");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('displayimp')) {
-          openDropdown.classList.remove('displayimp');
-        }
-      }
-    }
-  }
+  // window.onclick = function(event) {
+  //   if (!event.target.matches('.navbars')) {
+  //     var dropdowns = document.getElementsByClassName("smallscreenres");
+  //     var i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('displayimp')) {
+  //         openDropdown.classList.remove('displayimp');
+  //       }
+  //     }
+  //   }
+  // }
